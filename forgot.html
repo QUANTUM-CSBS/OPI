@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="icon" type="image/png/jpeg" href="MY_FAV.jpeg">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .glitch {
+            font-family: 'Arial', sans-serif;
+            font-size: 6em;
+            color: #007bff;
+            position: relative;
+            display: inline-block;
+            margin: 0;
+        }
+
+        .glitch:before,
+        .glitch:after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            clip: rect(0, 900px, 0, 0);
+        }
+
+        .glitch:before {
+            left: 2px;
+            text-shadow: -2px 0 #007bff;
+            animation: glitch-anim-1 2s infinite linear alternate-reverse;
+        }
+
+        .glitch:after {
+            left: -2px;
+            text-shadow: -2px 0 #00c2e0;
+            animation: glitch-anim-2 3s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim-1 {
+            0% {
+                clip: rect(10px, 9999px, 28px, 0);
+            }
+            5%, 7% {
+                clip: rect(32px, 9999px, 48px, 0);
+            }
+            10%, 12%, 23%, 45%, 56%, 100% {
+                clip: rect(24px, 9999px, 40px, 0);
+            }
+        }
+
+        @keyframes glitch-anim-2 {
+            0% {
+                clip: rect(60px, 9999px, 8px, 0);
+            }
+            5%, 7% {
+                clip: rect(20px, 9999px, 44px, 0);
+            }
+            10%, 12%, 23%, 45%, 56%, 100% {
+                clip: rect(36px, 9999px, 32px, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener("contextmenu",function(event){
+            alert("Inspect Elements Not Allowed");
+            event.preventDefault();
+        })    
+    </script>
+    <div class="container">
+        <h1 class="glitch" data-text="Forgot Password">Forgot Password</h1>
+        <p>Don't worry, we've got you covered!</p>
+        <p>Now Dont worry just give your DSA-C Exam</p>
+        <p>Renuka Mam is with you</p>
+    </div>
+</body>
+</html>

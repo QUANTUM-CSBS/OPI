@@ -1,0 +1,59 @@
+
+.cta-container {
+    background-color: rgba(0, 123, 255, 0.11);
+    padding: 50px;
+    text-align: center;
+}
+
+.cta-container label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.cta-container select {
+    background-color: #ffc107;
+    color: #000000; 
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 250px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.cta-container select:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.cta-container button.custom-btn {
+    background-color: #ffc107; 
+    color: #000000; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px; 
+}
+
+.cta-container button.custom-btn:hover,
+.cta-container button.custom-btn.active {
+    background-color: #e0a800;
+    color: #ffffff; 
+}
+
+#map {
+    height: 500px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-pills .nav-link.active {
+    background-color: #ffc107 !important;
+    color: #000000 !important;
+}

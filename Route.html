@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Button.css">
+</head>
+<body>
+<ul class="nav nav-pills nav-fill gap-2 p-1 small shadow-sm" id="pillNav2" role="tablist" style="--bs-nav-link-color: #ffffff; --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white); background-color: rgba(0, 123, 255, 0.11); color: #ffffff;"> 
+    <li class="nav-item" role="presentation">
+        <button class="nav-link rounded-8" id="mode-toggle" type="button" role="tab" aria-selected="false">
+            <label class="theme-switch">
+                <input type="checkbox" class="theme-switch__checkbox" id="themeCheckbox">
+                <div class="theme-switch__container">
+                    <div class="theme-switch__clouds"></div>
+                    <div class="theme-switch__stars-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 36.3545ZM106.831 5.00688C106.055 5.85027 105.111 6.29946 104 6.35447C105.111 6.40947 106.055 6.85867 106.831 7.71123C107.607 8.55462 107.996 9.56303 107.996 10.7273C107.996 9.95722 108.172 9.25134 108.525 8.59129C108.886 7.93124 109.372 7.39954 109.98 7.00535C110.598 6.60199 111.268 6.39114 112 6.35447C110.88 6.2903 109.936 5.85027 109.16 5.00688C108.384 4.16348 107.996 3.16425 107.996 2C107.996 3.16425 107.607 4.16348 106.831 5.00688ZM160 15.3545C161.111 15.2995 162.055 14.8503 162.831 14.0069C163.607 13.1635 163.996 12.1642 163.996 11C163.996 12.1642 164.384 13.1635 165.16 14.0069C165.936 14.8503 166.88 15.2903 168 15.3545C167.268 15.3911 166.598 15.602 165.98 16.0053C165.372 16.3995 164.886 16.9312 164.525 17.5913C164.172 18.2513 163.996 18.9572 163.996 19.7273C163.996 18.563 163.607 17.5546 162.831 16.7112C162.055 15.8587 161.111 15.4095 160 15.3545ZM0 55.3545C1.11136 55.2995 2.05513 54.8503 2.83131 54.0069C3.6075 53.1635 3.99559 52.1642 3.99559 51C3.99559 52.1642 4.38368 53.1635 5.15987 54.0069C5.93605 54.8503 6.87982 55.2903 8 55.3545C7.26792 55.3911 6.59757 55.602 5.98015 56.0053C5.37155 56.3995 4.88644 56.9312 4.52481 57.5913C4.172 58.2513 3.99559 58.9572 3.99559 59.7273C3.99559 58.563 3.6075 57.5546 2.83131 56.7112C2.05513 55.8587 1.11136 55.4095 0 55.3545Z" fill="#FFCC00"></path>
+                        </svg>
+                    </div>
+                    <div class="theme-switch__circle-container">
+                        <div class="theme-switch__sun-moon-container">
+                            <div class="theme-switch__moon">
+                                <div class="theme-switch__spot"></div>
+                                <div class="theme-switch__spot"></div>
+                                <div class="theme-switch__spot"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </label>
+        </button>
+    </li>
+</ul>
+
+<div class="cta-container">
+    <label for="startPort">Select Start Port:</label>
+    <select id="startPort" class="custom-select">
+        <option value="Mumbai">Mumbai</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Visakhapatnam">Visakhapatnam</option>
+        <option value="Kandla">Kandla</option>
+        <option value="Cochin">Cochin</option>
+        <option value="Mangalore">Mangalore</option>
+        <option value="Paradip">Paradip</option>
+        <option value="New Mangalore">New Mangalore</option>
+        <option value="V.O. Chidambaranar (Tuticorin)">Tuticorin</option>
+        <option value="Jawaharlal Nehru Port Trust">Jawaharlal Nehru Port Trust</option>
+        
+    </select>
+
+    <label for="endPort">Select End Port:</label>
+    <select id="endPort" class="custom-select">
+        <option value="Mumbai">Mumbai</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Visakhapatnam">Visakhapatnam</option>
+        <option value="Kandla">Kandla</option>
+        <option value="Cochin">Cochin</option>
+        <option value="Mangalore">Mangalore</option>
+        <option value="Paradip">Paradip</option>
+        <option value="New Mangalore">New Mangalore</option>
+        <option value="V.O. Chidambaranar (Tuticorin)">Tuticorin</option>
+        <option value="Jawaharlal Nehru Port Trust">Jawaharlal Nehru Port Trust</option>
+        
+    </select>
+
+    <button class="custom-btn" onclick="optimizeRoute()">Optimize Route</button>
+</div>
+
+<div id="map" style="height: 500px"></div>
+
+<footer class="container-fluid py-5 my-5 border-top">
+    <div class="row row-cols-1 row-cols-md-5">
+        <div class="col mb-4 mb-md-0">
+            <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <p class="text-muted">© 2021</p>
+        </div>
+
+        <div class="col mb-4 mb-md-0"></div>
+
+        <div class="col mb-4 mb-md-0">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+            </ul>
+        </div>
+
+        <div class="col mb-4 mb-md-0">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+            </ul>
+        </div>
+
+        <div class="col mb-4 mb-md-0">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
