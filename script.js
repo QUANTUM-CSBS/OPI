@@ -27,7 +27,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap'
 }).addTo(map);
 
-const apiKey = 'mOze5KTJ8173qIzicB4hf4oxSWdBbuQbnbNp0rv5';
+const apiKey = 'RlM4wsxAgc6HrvjZ9fp3x3mawWtDetuu2qwa2F4c';
 const apiUrl = 'https://api.searoutes.com/route/v2/sea/all';
 
 async function getSeaRoute(startCoords, endCoords) {
